@@ -18,11 +18,12 @@ class SectionDescriptionText extends LitElement {
     static get styles() {
         return css `
             .container__text {
+                max-width: 600px;
                 text-align: center;
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding: 0 25px;
+                margin-top: 50px;
                 margin-bottom: 20px;
             }
 

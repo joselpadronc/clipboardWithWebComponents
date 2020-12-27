@@ -21,7 +21,6 @@ class MiniDescriptionsText extends LitElement {
                 flex-direction: column;
                 align-items: center;
                 justify-content: center;
-                padding: 0 25px;
                 margin-bottom: 40px;
             }
 
@@ -35,6 +34,13 @@ class MiniDescriptionsText extends LitElement {
                 font-size: 16px;
                 font-weight: 400;
                 color: hsl(201, 11%, 66%);
+            }
+
+            @media screen and (min-width: 1024px) {
+                .container-minidesc {
+                    text-align: left;
+                    padding: 0 0 0 25px;
+                }
             }
         `;
     }
