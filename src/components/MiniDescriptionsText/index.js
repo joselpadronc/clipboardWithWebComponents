@@ -1,6 +1,19 @@
 import {LitElement, html, css} from 'lit-element';
 
 class MiniDescriptionsText extends LitElement {
+    static get properties() {
+        return {
+            title: { type: String },
+            paragraph: { type: String },
+        }
+    }
+
+    constructor() {
+        super();
+        this.title;
+        this.paragraph;
+    }
+
     static get styles() {
         return css `
             .container-minidesc {
@@ -12,7 +25,7 @@ class MiniDescriptionsText extends LitElement {
                 margin-bottom: 40px;
             }
 
-            .container-minidesc h1 {
+            .container-minidesc h2 {
                 font-size: 30px;
                 font-weight: 600;
                 color: hsl(210, 10%, 33%);
@@ -21,7 +34,7 @@ class MiniDescriptionsText extends LitElement {
             .container-minidesc p {
                 font-size: 16px;
                 font-weight: 400;
-                color: hsl(210, 10%, 33%);
+                color: hsl(201, 11%, 66%);
             }
         `;
     }
@@ -29,9 +42,8 @@ class MiniDescriptionsText extends LitElement {
     render() {
         return html `
             <article class='container-minidesc'>
-                <h2>A history of everything you copy</h2>
-                <p>Clipboard allows you to track and organize everything you
-                copy. Instantly access your clipboard on all your devices.</p>
+                <h2>${this.title}</h2>
+                <p>${this.paragraph}</p>
             </article>
         `;
     }

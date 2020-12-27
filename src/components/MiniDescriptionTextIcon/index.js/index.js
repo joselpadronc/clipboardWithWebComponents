@@ -1,6 +1,21 @@
 import {LitElement, html, css} from 'lit-element';
 
 class MiniDescriptionTextIcon extends LitElement {
+    static get properties() {
+        return {
+            icon: { type: String },
+            title: { type: String },
+            paragraph: { type: String },
+        }
+    }
+
+    constructor() {
+        super();
+        this.icon;
+        this.title;
+        this.paragraph;
+    }
+
     static get styles() {
         return css `
             .container-item {
@@ -14,8 +29,8 @@ class MiniDescriptionTextIcon extends LitElement {
                 text-align: center;
             }
 
-            .container-item__text h1 {
-                font-size: 30px;
+            .container-item__text h2 {
+                font-size: 24px;
                 font-weight: 600;
                 color: hsl(210, 10%, 33%);
             }
@@ -23,7 +38,7 @@ class MiniDescriptionTextIcon extends LitElement {
             .container-item__text p {
                 font-size: 16px;
                 font-weight: 400;
-                color: hsl(210, 10%, 33%);
+                color: hsl(201, 11%, 66%);
             }
         `;
     }
@@ -31,13 +46,12 @@ class MiniDescriptionTextIcon extends LitElement {
     render() {
         return html `
             <article class='container-item'>
-                <picture class='container-item__text'>
-                    <img src='https://raw.githubusercontent.com/joselpadronc/clipboardWithWebComponents/2a3f3630a28900173c7226f7255f77c48aa97ed7/src/static/images/icon-preview.svg'>
+                <picture class='container-item__icon'>
+                    <img src='${this.icon}'>
                 </picture>
                 <div class='container-item__text'>
-                    <h2>A history of everything you copy</h2>
-                    <p>Clipboard allows you to track and organize everything you
-                    copy. Instantly access your clipboard on all your devices.</p>
+                    <h2>${this.title}</h2>
+                    <p>${this.paragraph}</p>
                 </div>
             </article>
         `;

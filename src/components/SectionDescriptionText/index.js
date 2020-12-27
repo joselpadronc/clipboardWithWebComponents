@@ -1,6 +1,20 @@
 import {LitElement, html, css} from 'lit-element';
 
 class SectionDescriptionText extends LitElement {
+    static get properties() {
+        return {
+            title: { type: String },
+            paragraph: { type: String },
+        }
+    }
+
+    constructor() {
+        super();
+        this.title;
+        this.paragraph;
+    }
+
+
     static get styles() {
         return css `
             .container__text {
@@ -21,7 +35,7 @@ class SectionDescriptionText extends LitElement {
             .container__text p {
                 font-size: 16px;
                 font-weight: 400;
-                color: hsl(210, 10%, 33%);
+                color: hsl(201, 11%, 66%);
             }
         `;
     }
@@ -29,9 +43,8 @@ class SectionDescriptionText extends LitElement {
     render() {
         return html `
             <div class='container__text'>
-                <h1>A history of everything you copy</h1>
-                <p>Clipboard allows you to track and organize everything you
-                copy. Instantly access your clipboard on all your devices.</p>
+                <h1>${this.title}</h1>
+                <p>${this.paragraph}</p>
             </div>
         `;
     }
