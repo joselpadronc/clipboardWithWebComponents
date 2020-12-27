@@ -5,7 +5,6 @@ body {
 }
 
 .banner {
-    width: 100%;
     padding: 25px;
     background-image: url('https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/bg-header-mobile.png?raw=true');
     background-repeat: no-repeat;
@@ -14,7 +13,6 @@ body {
 
 .banner-container {
     width: 100%;
-    max-width: 1024px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,17 +25,18 @@ body {
 }
 
 .banner-container__content {
-    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-content: center;
 }
 
 .pc,
 .devices {
-    width: 100%;
     margin-top: 50px;
     padding: 25px;
 }
 
-.pc-content {
+.pc-content, .devices-content {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,7 +64,6 @@ body {
 }
 
 .businessSection {
-    width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 25px;
@@ -80,19 +78,19 @@ body {
 }
 
 .bottomCta {
-    width: 100%;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 25px;
 }
 
-.bottomCta-content {
+.bottomCta-container {
     display: flex;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer {
-    width: 100%;
     margin-top: 50px;
     padding: 25px;
     background-color: #f5f6f8;
@@ -129,5 +127,75 @@ body {
     width: 100%;
     margin-top: 25px;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
+    grid-gap: 25px;
+}
+
+.attribution {
+    text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+    .banner {
+        background-image: url('https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/bg-header-desktop.png?raw=true');
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+}
+
+@media screen and (min-width: 1024px) {
+    .pc-content__grid {
+        display: grid;
+        grid-template-columns: 1fr 300px;
+        grid-gap: 50px;
+        align-items: center;
+    }
+
+    .devices-image img {
+        width: 800px;
+    }
+
+    .devices-content__items {
+        display: grid;
+        grid-template-columns: repeat(3, 400px);
+        align-items: center;
+    }
+
+    .businessSection-content {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        grid-gap: 100px;
+        align-items: center;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        grid-gap: 20px;
+    }
+
+    .footer-content {
+        max-width: 1024px;
+        width: 100%;
+        display: grid;
+        grid-template-columns: 60px 1fr 150px;
+        grid-gap: 60px;
+        align-items: center;
+    }
+
+    .footer-content__logo img {
+        margin-top: 0;
+    }
+
+    .nav-container {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+
+    .nav-container__social {
+        margin-top: 0;
+    }
 }

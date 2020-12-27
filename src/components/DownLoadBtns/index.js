@@ -31,6 +31,14 @@ class DownloadBtns extends LitElement {
             .downloadbtn:focus {
                 outline: none;
             }
+            
+            @media screen and (min-width: 1024px) {
+                .container-btns {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                }
+            }
         `;
     }
 
