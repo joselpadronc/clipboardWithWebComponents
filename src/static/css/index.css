@@ -1,0 +1,51 @@
+.banner {
+    background-image: url('https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/bg-header-mobile.png?raw=true');
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.banner-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo {
+    margin-top: 100px;
+    margin-bottom: 20px;
+}
+
+.sections {
+    margin-top: 150px;
+}
+
+.images-sections {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 25px;
+    margin-bottom: 45px;
+}
+
+.images-sections img {
+    width: 100%;
+    object-fit: contain;
+}
+
+.businessSection {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    grid-gap: 70px;
+}
+
+.attribution {
+    font-size: 11px; text-align: center;
+}
+.attribution a {
+    color: hsl(228, 45%, 44%);
+}

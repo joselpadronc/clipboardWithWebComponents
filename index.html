@@ -5,18 +5,71 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+  <link rel="stylesheet" type="text/css" href="./src/static/css/index.css">
+  <link rel="stylesheet" type="text/css" href="./src/static/css/globals.css">
+  <link rel="preconnect" type="text/css" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@400;600&display=swap" rel="stylesheet">
   <title>Frontend Mentor | Clipboard landing page</title>
-  <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
+
 </head>
 <body>
-  <banner-element></banner-element>
+  <main class='banner'>
+    <div class='banner-container container'>
+        <picture class='logo'>
+            <img src='https://raw.githubusercontent.com/joselpadronc/clipboardWithWebComponents/2a3f3630a28900173c7226f7255f77c48aa97ed7/src/static/images/logo.svg'>
+        </picture>
+      </div>
+      <section-description-text></section-description-text>
+      <download-btns></download-btns>
+  </main>
+
+  <section class='container sections pcSection'>
+    <section-description-text></section-description-text>
+    <picture class='images-sections'>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/image-computer.png?raw=true">
+    </picture>
+    <mini-descriptions-text></mini-descriptions-text>
+    <mini-descriptions-text></mini-descriptions-text>
+    <mini-descriptions-text></mini-descriptions-text>
+  </section>
+
+  <section class='container sections devicesSection'>
+    <section-description-text></section-description-text>
+    <picture class='images-sections'>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/image-devices.png?raw=true">
+    </picture>
+    <mini-descriptions-text></mini-descriptions-text>
+    <mini-description-text-icon></mini-description-text-icon>
+    <mini-description-text-icon></mini-description-text-icon>
+    <mini-description-text-icon></mini-description-text-icon>
+  </section>
+
+  <section class='container sections businessSection'>
+    <picture>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/logo-google.png?raw=true" alt="">
+    </picture>
+    <picture>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/logo-ibm.png?raw=true" alt="">
+    </picture>
+    <picture>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/logo-microsoft.png?raw=true" alt="">
+    </picture>
+    <picture>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/logo-hp.png?raw=true" alt="">
+    </picture>
+    <picture>
+      <img src="https://github.com/joselpadronc/clipboardWithWebComponents/blob/main/src/static/images/logo-vector-graphics.png?raw=true" alt="">
+    </picture>
+  </section>
+
+  <section class='container sections'>
+    <section-description-text></section-description-text>
+    <download-btns></download-btns>
+  </section>
+
   <footer>
     <p class="attribution">
-      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
       Coded by <a href="#">Your Name Here</a>.
     </p>
   </footer>
