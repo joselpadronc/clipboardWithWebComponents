@@ -157,14 +157,27 @@ body {
 
     .pc-content {
         max-width: 1024px;
-        
     }
 
     .pc-content__grid {
+        /* position: relative; */
         display: grid;
-        grid-template-columns: 1fr 400px;
-        grid-gap: 50px;
+        grid-template-columns: 1fr 475px;
+        grid-template-areas: 'image textItem';
+        grid-column-gap: 20px;
         align-items: center;
+        /* margin-top: 25px; */
+    }
+
+    .pc-content__image {
+        position: absolute;
+        left: -15px;
+        width: 550px;
+        /* margin-top: 15px; */
+    }
+
+    .pc-content__text {
+        grid-area: textItems;
     }
 
     .devices-image img {
